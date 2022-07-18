@@ -8,7 +8,7 @@ module.exports = defineConfig({
   publicPath: './',
   devServer: {
     open: true,
-    port: 8888,
+    port: 9355,
     https: false,
     host: 'localhost',
     proxy: {

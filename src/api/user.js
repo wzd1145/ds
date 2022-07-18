@@ -5,3 +5,11 @@ import request from '../utils/request'
  * @param {Object} //用户名以及密码
  */
 export const login = (model) => request.post('/admin/login', model)
+
+/**
+ * 侧边栏
+ * @param {} model
+ * @returns
+ */
+
+export const getinfo = (model) => request.post('/admin/getinfo', model)
