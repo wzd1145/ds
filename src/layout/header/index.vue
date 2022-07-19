@@ -8,8 +8,8 @@
         <el-icon size="28px"><Expand /></el-icon>
       </span>
       <span class="aaa"
-        ><el-icon size="28px"><RefreshLeft /></el-icon
-      ></span>
+        ><el-icon size="28px" @click="refresh"><RefreshLeft /></el-icon>
+      </span>
     </div>
     <div></div>
     <div class="right">
@@ -45,6 +45,9 @@ const menus = reactive({
   username: ''
 })
 
+const refresh = () => {
+  window.location.reload()
+}
 const logout = () => {
   localStorage.removeItem('token')
   router.push('/login')
