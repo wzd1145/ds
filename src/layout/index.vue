@@ -5,7 +5,12 @@
       <el-container>
         <el-aside style="width: 200px"><Aside></Aside></el-aside>
         <el-container>
-          <el-main><Main></Main></el-main>
+          <el-main
+            ><div style="width: 100%; height: 50px; background-color: red">
+              123456
+            </div>
+            <Main></Main
+          ></el-main>
         </el-container>
       </el-container>
     </el-container>

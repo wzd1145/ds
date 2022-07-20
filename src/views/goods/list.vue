@@ -38,12 +38,12 @@
       <el-button>下架</el-button>
     </div>
     <el-table :data="tableData" style="width: 100%">
-      <el-table-column fixed prop="date" label="商品" width="150" />
-      <el-table-column prop="name" label="实际销量" width="120" />
-      <el-table-column prop="state" label="商品状态" width="120" />
-      <el-table-column prop="city" label="审核状态" width="120" />
-      <el-table-column prop="address" label="总库存" width="600" />
-      <el-table-column fixed="right" label="操作" width="120">
+      <el-table-column prop="date" label="商品" />
+      <el-table-column prop="name" label="实际销量" />
+      <el-table-column prop="state" label="商品状态" />
+      <el-table-column prop="city" label="审核状态" />
+      <el-table-column prop="address" label="总库存" />
+      <el-table-column fixed="right" label="操作">
         <template #default>
           <el-button link type="primary" size="small">修改</el-button>
           <el-button link type="primary" size="small">商品规格</el-button>
@@ -58,8 +58,22 @@
 
 <script setup>
 import { ref } from 'vue'
+import GoodsApi from '@/api/goodsList'
 const name = ref('')
 const region = ref('')
+
+const getcategory = async () => {
+  await GoodsApi.getcategory().then((res) => {
+    console.log(res)
+  })
+}
+getcategory()
+const getgoods = async () => {
+  await GoodsApi.getgoods().then((res) => {
+    console.log(res)
+  })
+}
+getgoods()
 </script>
 
 <style lang="scss">

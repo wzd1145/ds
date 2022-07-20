@@ -2,7 +2,7 @@
   <el-menu
     active-text-color="#559eff"
     class="el-menu-vertical-demo"
-    default-active="index"
+    :default-active="$router.path"
     text-color="#303133"
     unique-opened
     router
@@ -15,7 +15,10 @@
         <span>{{ item.name }}</span>
       </template>
       <el-menu-item-group v-for="(menu, index) in item.child" :key="index">
-        <el-menu-item :index="menu.frontpath">
+        <el-menu-item
+          :index="menu.frontpath"
+          @click="addtags(menu.name, menu.frontpath)"
+        >
           <el-icon>
             <component :is="iconPath(menu.icon)"></component>
           </el-icon>
