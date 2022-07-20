@@ -1,11 +1,3 @@
-<!-- <template>
-  <div class="">123456</div>
-</template>
-
-<script></script>
-
-<style lang="scss"></style> -->
-
 <template>
   <div>
     <el-row :gutter="20">
