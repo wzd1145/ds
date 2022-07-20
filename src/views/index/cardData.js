@@ -11,32 +11,32 @@ export const cardData = [
   },
   {
     title: '订单',
-    // icon: '3',
+    icon: 'List',
     path: '/order/list'
   },
   {
     title: '评价',
-    // icon: '4',
+    icon: 'ChatDotSquare',
     path: '/comment/list'
   },
   {
     title: '图库',
-    // icon: '5',
+    icon: 'PictureFilled',
     path: '/image/list'
   },
   {
     title: '公告',
-    // icon: '6',
+    icon: 'Bell',
     path: '/notice/list'
   },
   {
     title: '配置',
-    // icon: '7',
+    icon: 'Operation',
     path: '/setting/base'
   },
   {
     title: '优惠券',
-    // icon: '8',
+    icon: 'CopyDocument',
     path: '/coupon/list'
   }
 ]
