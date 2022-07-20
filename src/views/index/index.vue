@@ -1,12 +1,13 @@
+<!-- <template>
+  <div class="">123456</div>
+</template>
+
+<script></script>
+
+<style lang="scss"></style> -->
+
 <template>
   <div>
-    <!-- subTitle: "总支付订单"
-        subUnit: ""
-        subValue: 51
-        title: "支付订单"
-        unit: "年"
-        unitColor: "success"
-        value: 51 -->
     <el-row :gutter="20">
       <el-col :span="6" v-for="item in listOne" :key="item.value">
         <el-card class="box-card" shadow="hover">
@@ -33,7 +34,7 @@
           <p>
             <el-button
               style="border: none; background: none; padding: 0; color: black"
-              :icon='item.icon'
+              :icon="item.icon"
               size="small"
             ></el-button>
           </p>
@@ -69,7 +70,7 @@
               >
             </span>
           </div>
-          <div id="chartMain" style="width: 600px; height: 277px"></div>
+          <div id="Main" style="width: 600px; height: 277px"></div>
         </el-card>
       </el-col>
       <el-col :span="12">
@@ -119,7 +120,7 @@ const getListOne = async () => {
 getListOne()
 const getChartData = async () => {
   const res = await HOMEAPI.getChart(chartType.value)
-  const myChart = echarts.init(document.getElementById('chartMain'))
+  const myChart = echarts.init(document.getElementById('Main'))
   // console.log(res)
   myChart.setOption({
     tooltip: {},

@@ -82,7 +82,7 @@ const submitForm = async (ruleFormRef) => {
   if (!ruleFormRef) return
   await ruleFormRef.validate((valid, fields) => {
     if (data.msg === 'ok') {
-      router.push('/')
+      router.push('/home')
       ElMessage({
         message: '登录成功',
         type: 'success'
