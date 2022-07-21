@@ -34,6 +34,7 @@ import { iconPath } from './icon'
 import { getinfo } from '../../api/user'
 import { reactive } from 'vue'
 const list = reactive({})
+// const tags = reactive([])
 const apiinfo = async () => {
   await getinfo().then((res) => {
     list.value = res.data.menus
@@ -41,5 +42,14 @@ const apiinfo = async () => {
   })
 }
 apiinfo()
+// const addtags = (name, path) => {
+//   console.log(name, path)
+//   tags.push({
+//     name: name,
+//     path: path
+//   })
+//   console.log(tags)
+//   localStorage.setItem('tags', JSON.stringify(tags))
+// }
 </script>
 <style lang="scss" scoped></style>

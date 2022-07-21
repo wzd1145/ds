@@ -39,6 +39,25 @@
     </div>
     <el-table :data="tableData" style="width: 100%">
       <el-table-column prop="date" label="商品" />
+      <template >
+        <div class="BigBox">
+          <div class="ImgBox">
+            <img
+              src="https://img0.baidu.com/it/u=1694074520,2517635995&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+              alt=""
+            />
+          </div>
+          <div class="RolmeBox">
+            <p class="name">ceshi</p>
+            <p>
+              <span class="money">￥10.00</span> |
+              <span>￥100.00</span>
+            </p>
+            <p class="classification">分类：运动旅行</p>
+            <p class="time">创建时间:2021-07-21 09:49:08</p>
+          </div>
+        </div>
+      </template>
       <el-table-column prop="name" label="实际销量" />
       <el-table-column prop="state" label="商品状态" />
       <el-table-column prop="city" label="审核状态" />
@@ -53,6 +72,24 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <div class="BigBox">
+      <div class="ImgBox">
+        <img
+          src="https://img0.baidu.com/it/u=1694074520,2517635995&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+          alt=""
+        />
+      </div>
+      <div class="RolmeBox">
+        <p class="name">ceshi</p>
+        <p>
+          <span class="money">￥10.00</span> |
+          <span>￥100.00</span>
+        </p>
+        <p class="classification">分类：运动旅行</p>
+        <p class="time">创建时间:2021-07-21 09:49:08</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -88,5 +125,36 @@ getgoods()
   }
 }
 .header-right {
+}
+.BigBox {
+  display: flex;
+  .ImgBox {
+    width: 70px;
+    height: 70px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .RolmeBox {
+    width: 250px;
+    height: 70px;
+    p {
+      font-size: 12px;
+      padding: 3px;
+    }
+    .name {
+      color: #606266;
+    }
+    .money {
+      color: red;
+    }
+    .classification {
+      color: #ccc;
+    }
+    .time {
+      color: #ccc;
+    }
+  }
 }
 </style>
